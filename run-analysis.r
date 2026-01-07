@@ -9,7 +9,7 @@ datadir <- args[1]
 resultsdir <- args[2]
 
 ## function for extracting tcga tar.gz's to named output
-extract.file <- function(tar.file, extract.file, new.file) {
+extract.file <- function(tar.file, extract.file, new.file, resultsdir) {
   # get file path to extracted file
   x.file <-
     grep(extract.file,
@@ -43,7 +43,8 @@ if (!file.exists(clinical.file)) {
         )
       ),
     extract.file = "HNSC.clin.merged.txt",
-    new.file = clinical.file
+    new.file = clinical.file,
+    resultsdir = resultsdir
   )
 }
 
@@ -62,7 +63,8 @@ if (!file.exists(protein.file)) {
         )
       ),
     extract.file = "data.txt",
-    new.file = protein.file
+    new.file = protein.file,
+    resultsdir = resultsdir
   )
 }
 ## clean protein output:
@@ -73,6 +75,7 @@ writeLines(lines, file.path(resultsdir, "protein-clean.txt"))
 
 ########################
 ## methylation data is pre-extracted into the 'methylation-clean-score-sites.csv' file
+
 
 
 ######################

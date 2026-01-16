@@ -2,7 +2,6 @@
 ## extract-data.r
 ## -------------------------------------------- ##
 
-library(here)
 args <- commandArgs(trailingOnly = TRUE)
 
 datadir <- args[1]
@@ -167,7 +166,6 @@ write.table(clinical, file = output.filename, row.names = F, col.names = T, sep 
 ## predict-proteins.r
 ## -------------------------------------------- ##
 library(meffonym)
-library(here)
 
 my.write.table <- function(x, filename) {
   cat("saving", basename(filename), "...\n")
@@ -229,7 +227,6 @@ my.write.table(
 ## -------------------------------------------- ##
 ## combine.r
 ## -------------------------------------------- ##
-library(here)
 args <- commandArgs(trailingOnly = T)
 datadir <- args[1]
 resultsdir <- args[2]

@@ -1,5 +1,3 @@
-
-library(here)
 library(rhds.rpackage)
 
 args <- commandArgs(trailingOnly = TRUE)

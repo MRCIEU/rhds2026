@@ -1,5 +1,3 @@
-
-library(here)
 args <- commandArgs(trailingOnly = TRUE)
 
 datadir <- args[1]

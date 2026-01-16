@@ -1,5 +1,4 @@
 library(meffonym)
-library(here)
 
 my.write.table <- function(x, filename) {
   cat("saving", basename(filename), "...\n")

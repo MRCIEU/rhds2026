@@ -1,5 +1,4 @@
 library(meffonym)
-library(here)
 library(rhds.rpackage)
 
 args <- commandArgs(trailingOnly = T)

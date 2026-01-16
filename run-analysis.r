@@ -1,6 +1,6 @@
-#####################
-## extract-data.r  ##
-#####################
+## -------------------------------------------- ##
+## extract-data.r
+## -------------------------------------------- ##
 
 library(here)
 args <- commandArgs(trailingOnly = TRUE)
@@ -76,11 +76,9 @@ writeLines(lines, file.path(resultsdir, "protein-clean.txt"))
 ########################
 ## methylation data is pre-extracted into the 'methylation-clean-score-sites.csv' file
 
-
-
-######################
-## clean-clinical.r ##
-######################
+## -------------------------------------------- ##
+## clean-clinical.r 
+## -------------------------------------------- ##
 
 args <- commandArgs(trailingOnly = T)
 datadir <- args[1]
@@ -165,10 +163,9 @@ clinical$dfi.time <- clinical.pan$DFI.time
 
 write.table(clinical, file = output.filename, row.names = F, col.names = T, sep = "\t")
 
-########################
-## predict-proteins.r ##
-########################
-
+## -------------------------------------------- ##
+## predict-proteins.r
+## -------------------------------------------- ##
 library(meffonym)
 library(here)
 
@@ -229,11 +226,9 @@ my.write.table(
   file.path(resultsdir, "predicted-proteins.txt")
 )
 
-
-###############
-## combine.r ##
-###############
-
+## -------------------------------------------- ##
+## combine.r
+## -------------------------------------------- ##
 library(here)
 args <- commandArgs(trailingOnly = T)
 datadir <- args[1]
@@ -319,11 +314,9 @@ my.write.table(
   out,
   file.path(resultsdir, "combined-clin-pred-proteins.txt")
 )
-
-################
-## analysis.r ##
-################
-
+## -------------------------------------------- ##
+## analysis.r
+## -------------------------------------------- ##
 library(ggplot2)
 library(ggrepel)
 
